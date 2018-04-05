@@ -1,0 +1,19 @@
+package ag.ifpb.rmi.iiop;
+
+import java.rmi.RemoteException;
+import java.util.Properties;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+public class ServerMain {
+
+	public static void main(String[] args) throws RemoteException, NamingException {
+		Properties env = new Properties();
+		env.setProperty(Context.INITIAL_CONTEXT_FACTORY,"com.sun.jndi.cosnaming.CNCtxFactory");
+        env.setProperty(Context.PROVIDER_URL,"iiop://localhost:1050");
+        Context context= new InitialContext(env);
+        context.rebind("service", new HelloServerImpl());
+	}
+}

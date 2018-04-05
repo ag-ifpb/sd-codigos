@@ -1,0 +1,5 @@
+module service{
+  interface Hello{
+    void hello(in string name);
+  };
+};

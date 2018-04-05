@@ -1,0 +1,11 @@
+ifpb/grpc/Msg$HelloResponse$Builder.class
+ifpb/grpc/Msg$HelloRequest$1.class
+ifpb/grpc/Msg$HelloResponse$1.class
+ifpb/grpc/Msg$HelloResponse.class
+ifpb/grpc/Msg$HelloRequest$Builder.class
+ifpb/grpc/Msg$HelloRequestOrBuilder.class
+ifpb/grpc/Msg$HelloRequest.class
+ifpb/grpc/Msg$1.class
+ifpb/grpc/Msg.class
+ifpb/grpc/Msg$HelloResponseOrBuilder.class
+ifpb/grpc/server/App.class

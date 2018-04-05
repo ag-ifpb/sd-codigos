@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_package = "ifpb.grpc";
+
+message HelloRequest {
+  string text = 1;
+}
+
+message HelloResponse {
+  string text = 1;
+}
+
+service HelloService {
+  rpc hello (HelloRequest) returns (HelloResponse) {}
+}
+
+

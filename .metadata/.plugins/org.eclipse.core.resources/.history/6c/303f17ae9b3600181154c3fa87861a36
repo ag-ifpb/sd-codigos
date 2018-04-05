@@ -1,0 +1,11 @@
+package ifpb.grpc.server;
+
+/**
+ * Hello world!
+ *
+ */
+public class App {
+	public static void main(String[] args) {
+		Msg.
+	}
+}

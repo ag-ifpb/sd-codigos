@@ -1,0 +1,5 @@
+package ag.ifpb.rmi.iiop.idl;
+
+public class ClientMain {
+
+}

@@ -1,0 +1,33 @@
+package ag.ifpb.rmi.iiop.idl;
+
+import java.rmi.RemoteException;
+
+import javax.rmi.PortableRemoteObject;
+
+import org.omg.CORBA.Context;
+import org.omg.CORBA.ContextList;
+import org.omg.CORBA.DomainManager;
+import org.omg.CORBA.ExceptionList;
+import org.omg.CORBA.NVList;
+import org.omg.CORBA.NamedValue;
+import org.omg.CORBA.Object;
+import org.omg.CORBA.Policy;
+import org.omg.CORBA.Request;
+import org.omg.CORBA.SetOverrideType;
+
+import ag.ifpb.rmi.iiop.idl.server.service.Hello;
+import ag.ifpb.rmi.iiop.idl.server.service.HelloPOA;
+
+
+public class HelloImpl implements ag.ifpb.rmi.iiop.idl.service.Hello{
+	
+	protected HelloImpl() throws RemoteException {
+		super();
+	}
+
+	@Override
+	public void hello(String name) throws RemoteException {
+		System.out.println("Hello, " + name); 
+	}
+	
+}

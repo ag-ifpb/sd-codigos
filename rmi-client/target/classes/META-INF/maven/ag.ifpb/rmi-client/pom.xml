@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>ag.ifpb</groupId>
+  <artifactId>rmi-client</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>rmi-client</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+    <proj.name>${project.name}</proj.name>
+  </properties>
+
+  <dependencies>
+    <dependency>
+    	<groupId>ag.ifpb</groupId>
+    	<artifactId>rmi-raw-shared</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<scope>system</scope>
+    	<systemPath>${basedir}/lib/rmi-shared-0.0.1-SNAPSHOT.jar</systemPath>
+    </dependency>
+  </dependencies>
+  
+  <build>
+  	<finalName>${proj.name}</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+</project>

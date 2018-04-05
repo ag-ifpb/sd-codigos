@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/bin/java -cp target/rmi-raw-client.jar:lib/* ag.ifpb.rmi.raw.client.App

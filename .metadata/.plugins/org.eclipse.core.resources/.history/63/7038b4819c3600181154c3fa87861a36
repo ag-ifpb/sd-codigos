@@ -1,0 +1,16 @@
+package ifpb.grpc.server;
+
+import ifpb.grpc.Msg;
+import ifpb.grpc.Msg.HelloRequest;
+
+/**
+ * Hello world!
+ *
+ */
+public class App {
+	public static void main(String[] args) {
+		 HelloRequest.Builder builder = Msg.HelloRequest.newBuilder();
+		 HelloRequest req = builder.setText("Ari Garcia")
+		 	.build(); 
+	}
+}
