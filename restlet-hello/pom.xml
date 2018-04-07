@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ <modelVersion>4.0.0</modelVersion>
+
+ <groupId>fjn.espec.dispositivosmoveis</groupId>
+ <artifactId>fjn.espec.dispositivosmoveis.app</artifactId>
+ <version>0.0.1-SNAPSHOT</version>
+ <packaging>jar</packaging>
+
+ <properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+ </properties>
+
+ <repositories>
+  <repository>
+   <id>maven-restlet</id>
+   <name>Public online Restlet repository</name>
+   <url>http://maven.restlet.org</url>
+  </repository>
+ </repositories>
+
+ <dependencies>
+  <dependency>
+   <groupId>org.restlet.jee</groupId>
+   <artifactId>org.restlet</artifactId>
+   <version>2.1.2</version>
+  </dependency>
+  <dependency>
+   <groupId>org.restlet.jee</groupId>
+   <artifactId>org.restlet.ext.json</artifactId>
+   <version>2.1.2</version>
+  </dependency>
+  <dependency>
+   <groupId>org.restlet.jse</groupId>
+   <artifactId>org.restlet.ext.jetty</artifactId>
+   <version>2.1.2</version>
+  </dependency>
+  <dependency>
+   <groupId>junit</groupId>
+   <artifactId>junit</artifactId>
+   <version>3.8.1</version>
+   <scope>test</scope>
+  </dependency>
+  <dependency>
+   <groupId>org.eclipse.jetty</groupId>
+   <artifactId>jetty-servlet</artifactId>
+   <version>7.6.0.v20120127</version>
+  </dependency>
+ </dependencies>
+
+ <build>
+  <plugins>
+   <plugin>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>2.3.2</version>
+   </plugin>
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <version>2.4</version>
+    <executions>
+     <execution>
+      <id>copy-dependencies</id>
+      <phase>package</phase>
+      <goals>
+       <goal>copy-dependencies</goal>
+      </goals>
+     </execution>
+    </executions>
+   </plugin>
+  </plugins>
+  <pluginManagement>
+   <plugins>
+    <plugin>
+     <groupId>org.eclipse.m2e</groupId>
+     <artifactId>lifecycle-mapping</artifactId>
+     <version>1.0.0</version>
+     <configuration>
+      <lifecycleMappingMetadata>
+       <pluginExecutions>
+        <pluginExecution>
+         <pluginExecutionFilter>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <versionRange>[2.0,)</versionRange>
+          <goals>
+           <goal>generate</goal>
+           <goal>compile</goal>
+           <goal>resources</goal>
+           <goal>testResources</goal>
+          </goals>
+         </pluginExecutionFilter>
+         <action>
+          <ignore />
+         </action>
+        </pluginExecution>
+       </pluginExecutions>
+      </lifecycleMappingMetadata>
+     </configuration>
+    </plugin>
+   </plugins>
+  </pluginManagement>
+ </build>
+
+</project>

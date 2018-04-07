@@ -7,9 +7,12 @@ import javax.jws.WebService;
 
 
 
+//Adote a seguinte anotação na implementação:
 @WebService(
-		name = "Hello", //nome do webservice
-		serviceName = "HelloService"//, //nome do serviço do webservice,
+	name="Monitor", 
+	serviceName="MonitorService",
+	targetNamespace="ag.ifpb", 
+	portName="MonitorServicePort"
 )
 public class MyServiceImpl implements MyService {
 
